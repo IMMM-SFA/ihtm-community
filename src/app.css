@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+   overscroll-behavior: none;
+}
+
+/* ArchivoNarrow */
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-Regular.ttf');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-Italic.ttf');
+	font-style: italic;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-Medium.ttf');
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-MediumItalic.ttf');
+	font-style: italic;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-SemiBold.ttf');
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-SemiBoldItalic.ttf');
+	font-style: italic;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-Bold.ttf');
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'ArchivoNarrow';
+	src: url('/fonts/ArchivoNarrow-BoldItalic.ttf');
+	font-style: italic;
+	font-weight: 700;
+}
+
+/* Archivo */
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-Regular.ttf');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-Italic.ttf');
+	font-style: italic;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-Medium.ttf');
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-MediumItalic.ttf');
+	font-style: italic;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-SemiBold.ttf');
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-SemiBoldItalic.ttf');
+	font-style: italic;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-Bold.ttf');
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Archivo';
+	src: url('/fonts/Archivo-BoldItalic.ttf');
+	font-style: italic;
+	font-weight: 700;
+}
+
+
+@layer components {
+	.text-shadow {
+		text-shadow: 2px 2px 4px var(--tw-shadow-color);
+	}
+	.text-shadow-inset {
+		text-shadow: inset 1px 1px 2px var(--tw-shadow-color);
+	}
+	.text-shadow-sm {
+		text-shadow: 1px 1px 2px var(--tw-shadow-color);
+	}
+	.text-shadow-md {
+		text-shadow: 4px 4px 8px var(--tw-shadow-color);
+	}
+	.text-shadow-lg {
+		text-shadow: 15px 15px 30px var(--tw-shadow-color);
+	}
+	.text-shadow-none {
+		text-shadow: none;
+	}
+}
