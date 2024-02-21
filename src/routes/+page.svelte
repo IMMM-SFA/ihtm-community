@@ -42,7 +42,7 @@
 
     <div class="w-full flex flex-col items-stretch py-8">
 
-        <div class="py-12 px-24 bg-brand-green shadow-black/25 drop-shadow flex flex-row flex-wrap justify-center text-white text-center text-2xl gap-x-1">
+        <div class="py-8 md:py-12 px-24 bg-brand-green shadow-black/25 drop-shadow flex flex-row flex-wrap justify-center text-white text-center text-2xl gap-x-1">
             <h3>
                 Advancing national-to-regional
             </h3>
@@ -57,7 +57,7 @@
             </h3>
         </div>
 
-        <div class="mx-24 p-8 flex flex-col rounded-lg text-white">
+        <div class="mx-8 md:mx-24 p-8 flex flex-col rounded-lg text-white">
             <h4 class="text-2xl font-semibold mb-4">
                 ABOUT US
             </h4>
@@ -79,14 +79,16 @@
             </div>
         </div>
 
-        <div class="px-32 py-8 flex flex-row flex-wrap justify-center gap-12 text-white shadow-black/25">
+        <div class="px-8 md:px-32 py-8 flex flex-row flex-wrap justify-center gap-12 text-white shadow-black/25">
             <div class="bg-brand-green drop-shadow rounded-lg w-72 flex flex-col px-8 py-6 gap-6 cursor-pointer card">
                 <h4 class="font-semibold text-2xl text-shadow">
                     Resources
                 </h4>
                 <img alt="" class="w-full drop-shadow" src="iso-ihtm_3.jpg"/>
                 <p class="text-lg text-shadow-sm">
-                    Links to ongoing projects, agency resources, and relevant data.
+                    Ongoing Projects<br/>
+                    Agency Resources<br/>
+                    Relevant Data
                 </p>
             </div>
             <div class="bg-brand-green drop-shadow rounded-lg w-72 flex flex-col px-8 py-6 gap-6 cursor-pointer card">
@@ -119,7 +121,7 @@
 
 <style>
     .clipped {
-        background: url($lib/img/hero.jpg);
+        background-image: url($lib/img/hero.jpg);
         clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 50% 99%, 0 90%, 0 0);
     }
     .raindrop {
