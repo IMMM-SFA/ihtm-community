@@ -1,7 +1,3 @@
-<script>
-    import hero from '$lib/img/hero.jpg';
-</script>
-
 <div class="w-full">
 
 
@@ -21,7 +17,7 @@
     {/each}
     </div>
 
-    <div class="clipped bg-[url('{hero}')] w-full h-screen bg-center bg-no-repeat bg-fixed flex items-center justify-center">
+    <div class="clipped w-full h-screen bg-center bg-no-repeat bg-fixed flex items-center justify-center">
         <div class="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/25 backdrop-blur-[2px]">
             <div class="w-48 h-48 sm:h-72 sm:w-72">
                 <img class="h-full" alt="" src="iso-ihtm_2.jpg"/>
@@ -123,6 +119,7 @@
 
 <style>
     .clipped {
+        background: url($lib/img/hero.jpg);
         clip-path: polygon(100% 0%, 100% 90%, 50% 99%, 50% 99%, 0 90%, 0 0);
     }
     .raindrop {
