@@ -1,3 +1,7 @@
+<script>
+    import hero from '$lib/img/hero.jpg';
+</script>
+
 <div class="w-full">
 
 
@@ -17,7 +21,7 @@
     {/each}
     </div>
 
-    <div class="clipped w-full h-screen bg-[url('hero.jpg')] bg-center bg-no-repeat bg-fixed flex items-center justify-center">
+    <div class="clipped bg-[url('{hero}')] w-full h-screen bg-center bg-no-repeat bg-fixed flex items-center justify-center">
         <div class="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/25 backdrop-blur-[2px]">
             <div class="w-48 h-48 sm:h-72 sm:w-72">
                 <img class="h-full" alt="" src="iso-ihtm_2.jpg"/>
