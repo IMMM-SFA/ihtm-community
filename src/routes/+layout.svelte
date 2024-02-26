@@ -1,6 +1,7 @@
 <script>
     import "../app.css";
     import { page } from '$app/stores';
+    import { base } from '$app/paths';
   </script>
 
 <div class="w-full">
@@ -11,7 +12,7 @@
             src="favicon.png"
         />
         <h1 class="text-lg sm:text-2xl font-semibold text-brand-primary">
-            {#if $page.url.pathname !== '/'}
+            {#if $page.url.pathname !== (base || '/')}
                 <a
                     class="border-b border-b-transparent hover:border-brand-primary"
                     href="/"
@@ -25,7 +26,7 @@
             {/if}
         </h1>
         <div class="flex flex-row items-center ml-auto gap-x-4 sm:gap-x-8 text-base sm:text-lg uppercase text-gray-500 font-narrow">
-            {#if $page.url.pathname !== '/about'}
+            {#if $page.url.pathname !== `${base}/about`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
                     href="/about"
@@ -37,7 +38,7 @@
                     About
                 </span>
             {/if}
-            {#if $page.url.pathname !== '/resources'}
+            {#if $page.url.pathname !== `${base}/resources`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
                     href="/resources"
@@ -49,7 +50,7 @@
                     Resources
                 </span>
             {/if}
-            {#if $page.url.pathname !== '/news'}
+            {#if $page.url.pathname !== `${base}/news`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
                     href="/news"

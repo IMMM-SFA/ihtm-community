@@ -35,8 +35,8 @@
                 Attendees discussed moving from community concepts towards actionable collaborative testbeds to accelerate innovations into societally relevant applications,
                 with a focus on facilitating interagency engagements to inform and strengthen bridges between the research and operational communities.
             </p>
-            <a class="ml-auto mt-auto text-xl font-narrow border-b border-b-transparent hover:border-b-brand-primary text-brand-primary" href="/news">
-                More News
+            <a class="ml-auto mt-auto text-xl font-narrow border-b border-b-transparent hover:border-b-brand-primary text-brand-primary" href="{base}/news">
+                Learn More!
             </a>
         </div>
     </div>
