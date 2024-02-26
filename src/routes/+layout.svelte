@@ -1,98 +1,70 @@
 <script>
-  import "../app.css";
-</script>
+    import "../app.css";
+    import { page } from '$app/stores';
+  </script>
 
-<div
-  class={`
-    w-full flex flex-row items-start lg:items-center pt-4 pb-8 px-5 gap-4 sticky top-0 h-60 lg:h-24
-    bg-gradient-to-b from-white/20 to-white/0 via-white/15 z-10
-    flex-wrap
-  `}
->
-  <div class="block-letter active">
-    <span>I</span>
-    <span>H</span>
-    <span>T</span>
-    <span>M</span>
-  </div>
-  <div class="flex-1 flex flex-col lg:flex-row gap-4 items-end">
-    <div class="ml-auto block-letter sm">
-      <span>R</span>
-      <span>E</span>
-      <span>S</span>
-      <span>O</span>
-      <span>U</span>
-      <span>R</span>
-      <span>C</span>
-      <span>E</span>
-      <span>S</span>
+<div class="w-full">
+    <div class="w-full flex flex-row items-center bg-white px-2 sm:px-8 py-1 sm:py-4 gap-x-2 sm:gap-x-4 drop-shadow">
+        <img
+            alt=""
+            class="w-10 h-10 rounded-full overflow-hidden drop-shadow-lg"
+            src="favicon.png"
+        />
+        <h1 class="text-lg sm:text-2xl font-semibold text-brand-primary">
+            {#if $page.url.pathname !== '/'}
+                <a
+                    class="border-b border-b-transparent hover:border-brand-primary"
+                    href="/"
+                >
+                    IHTM <span class="hidden sm:inline-block">Community</span>
+                </a>
+            {:else}
+                <span class="select-none">
+                    IHTM <span class="hidden sm:inline-block">Community</span>
+                </span>
+            {/if}
+        </h1>
+        <div class="flex flex-row items-center ml-auto gap-x-4 sm:gap-x-8 text-base sm:text-lg uppercase text-gray-500 font-narrow">
+            {#if $page.url.pathname !== '/about'}
+                <a
+                    class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
+                    href="/about"
+                >
+                    About
+                </a>
+            {:else}
+                <span class="select-none border-b border-b-gray-300">
+                    About
+                </span>
+            {/if}
+            {#if $page.url.pathname !== '/resources'}
+                <a
+                    class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
+                    href="/resources"
+                >
+                    Resources
+                </a>
+            {:else}
+                <span class="select-none border-b border-b-gray-300">
+                    Resources
+                </span>
+            {/if}
+            {#if $page.url.pathname !== '/news'}
+                <a
+                    class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
+                    href="/news"
+                >
+                    News
+                </a>
+            {:else}
+                <span class="select-none border-b border-b-gray-300">
+                    News
+                </span>
+            {/if}
+        </div>
     </div>
-    <div class="block-letter sm">
-      <span>R</span>
-      <span>E</span>
-      <span>P</span>
-      <span>O</span>
-      <span>R</span>
-      <span>T</span>
-      <span>S</span>
-    </div>
-    <div class="block-letter sm">
-      <span>N</span>
-      <span>E</span>
-      <span>W</span>
-      <span>S</span>
-    </div>
-  </div>
 </div>
 
-<div class="w-full h-full overflow-x-none overflow-y-auto mt-[-15rem] lg:mt-[-6rem] overscroll-contain bg-brand-blue">
-  <slot />
+<div class="w-full">
+  <slot/>
 </div>
-
-<style>
-  .block-letter {
-    font-size: 32px;
-    font-weight: 500;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    cursor: default;
-  }
-  .block-letter:not(.active) {
-    cursor: pointer;
-  }
-  .block-letter.sm {
-    font-size: 24px;
-  }
-  .block-letter span {
-    display: block;
-    width: 36px;
-    padding: 0 2px;
-    background-color: rgba(255,255,255,0.5);
-    backdrop-filter: blur(2px);
-    margin-right: 2px;
-    text-align: center;
-    transition: background-color,transform;
-    transition-duration: 250ms;
-  }
-  .block-letter span:first-child {
-    border-radius: 7px 0 0 7px;
-  }
-  .block-letter span:last-child {
-    border-radius: 0 7px 7px 0;
-  }
-  .block-letter.sm span {
-    width: 28px;
-  }
-  .block-letter:hover span, .block-letter.active span {
-    background-color: rgba(255,255,255,1);
-  }
-  .block-letter:hover span:nth-child(odd), .block-letter.active span:nth-child(odd) {
-    transform: skewY(4deg);
-  }
-
-  .block-letter:hover span:nth-child(even), .block-letter.active span:nth-child(even) {
-    transform: skewY(-4deg);
-  }
-  
-</style>
