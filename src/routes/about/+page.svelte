@@ -4,7 +4,7 @@
 
 <div
     class="
-        bg-fixed bg-cover md:bg-contain w-full bg-no-repeat bg-[url('$lib/img/river.webp')]
+        bg-fixed bg-cover md:bg-cover w-full bg-no-repeat bg-[url('$lib/img/river.webp')]
         h-72 -z-10
     "
 />
