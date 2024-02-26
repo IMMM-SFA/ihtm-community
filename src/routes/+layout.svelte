@@ -15,7 +15,7 @@
             {#if $page.url.pathname !== (base || '/')}
                 <a
                     class="border-b border-b-transparent hover:border-brand-primary"
-                    href="/"
+                    href="{base}/"
                 >
                     IHTM <span class="hidden sm:inline-block">Community</span>
                 </a>
@@ -29,7 +29,7 @@
             {#if $page.url.pathname !== `${base}/about`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
-                    href="/about"
+                    href="{base}/about"
                 >
                     About
                 </a>
@@ -41,7 +41,7 @@
             {#if $page.url.pathname !== `${base}/resources`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
-                    href="/resources"
+                    href="{base}/resources"
                 >
                     Resources
                 </a>
@@ -53,7 +53,7 @@
             {#if $page.url.pathname !== `${base}/news`}
                 <a
                     class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
-                    href="/news"
+                    href="{base}/news"
                 >
                     News
                 </a>
