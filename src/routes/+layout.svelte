@@ -1,47 +1,94 @@
 <script>
     import "../app.css";
-    import { page } from '$app/stores';
+    import { onDestroy, onMount } from "svelte";
+    import LinkIf from "$lib/LinkIf.svelte";
     import { base } from '$app/paths';
-  </script>
+    import { page } from '$app/stores';
 
-<div class="w-full sticky top-0 z-10">
-    <div class="w-full flex flex-row items-center bg-white px-2 sm:px-8 py-1 sm:py-4 gap-x-2 sm:gap-x-4 drop-shadow">
-        <img
-            alt=""
-            class="w-10 h-10 rounded-full overflow-hidden drop-shadow-lg"
-            src="favicon.png"
-        />
-        <h1 class="text-lg sm:text-2xl font-semibold text-brand-primary">
-            {#if $page.url.pathname !== (base || '/')}
-                <a
-                    class="border-b border-b-transparent hover:border-brand-primary"
+    let invert = false;
+    let intersect;
+    let observer;
+
+    onMount(() => {
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    invert = false;
+                }
+                else {
+                    invert = true;
+                }
+            });
+        });
+        observer.observe(intersect);
+    });
+
+    onDestroy(() => {
+        observer?.disconnect();
+    });
+
+
+</script>
+
+
+<div
+    class="
+        bg-fixed w-screen
+        bg-contain bg-no-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.25),rgba(0,0,0,0)_4rem),url('$lib/img/enchantments.webp')]
+        flex flex-col items-center justify-start
+        h-auto md:h-96
+    "
+>
+    <div
+        class="
+            fixed flex flex-col w-full py-4 backdrop-blur-[2px] z-10 items-center
+            {invert ? 'bg-white shadow-sm py-2' : ''}
+        "
+    >
+        <div
+            class="
+                flex flex-row items-center justify-start gap-4 max-w-screen-xl w-full px-8 lg:px-24
+            "
+        >
+            <h1
+                class="
+                    text-2xl font-semibold text-shadow-sm shadow-black/5
+                    {invert ? 'text-brand-primary' : 'text-white'} transition-colors
+                "
+            >
+                <LinkIf
                     href="{base}/"
+                    condition={$page.url.pathname !== (base || '/')}
+                    hoverClass={invert ? 'hover:border-b-brand-primary' : 'hover:border-b-white'}
                 >
                     IHTM <span class="hidden sm:inline-block">Community</span>
-                </a>
-            {:else}
-                <span class="select-none">
-                    IHTM <span class="hidden sm:inline-block">Community</span>
-                </span>
-            {/if}
-        </h1>
-        <div class="flex flex-row items-center ml-auto gap-x-4 sm:gap-x-8 text-base sm:text-lg uppercase text-gray-600 font-narrow">
-            {#if $page.url.pathname !== `${base}/resources`}
-                <a
-                    class="border-b border-b-transparent hover:text-brand-primary hover:border-brand-primary"
-                    href="{base}/resources"
-                >
-                    Resources
-                </a>
-            {:else}
-                <span class="select-none border-b border-b-gray-300">
-                    Resources
-                </span>
-            {/if}
+                </LinkIf>
+            </h1>
+            <div
+                class="
+                    flex flex-row flex-1 items-center justify-between gap-4 text-shadow-sm shadow-black/5
+                    font-narrow text-lg uppercase ml-8 sm:ml-16 md:ml-24 lg:ml-36 xl:ml-48
+                    {invert ? 'text-brand-primary' : 'text-white'} transition-colors
+                "
+            >
+                {#each ['about', 'resources', 'events'] as nav}
+                    <LinkIf
+                        href="{base}/{nav}"
+                        condition={$page.url.pathname !== `${base}/${nav}`}
+                        hoverClass={invert ? 'hover:border-b-brand-primary' : 'hover:border-b-white'}
+                    >
+                        {nav}
+                    </LinkIf>
+                {/each}
+            </div>
         </div>
     </div>
+    <h1 class="mt-16 font-narrow text-2xl md:text-4xl font-semibold text-center text-white text-shadow-sm shadow-black/25">
+        Integrated Hydro-Terrestrial Modeling Community
+    </h1>
+    <div class="mt-auto mb-6 md:mb-12" bind:this={intersect} />
 </div>
 
 <div class="w-full">
-  <slot/>
+    <slot/>
 </div>
