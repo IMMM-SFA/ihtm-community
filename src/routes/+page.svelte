@@ -38,10 +38,10 @@
     />
     <div class="flex flex-col items-center gap-4">
         <h3 class="font-narrow text-xl font-semibold text-gray-800 text-center">
-            Our mission is to help establish a community of practice of Integrated Hydro-Terrestrial Modeling (IHTM) researchers and managers.
+            Our mission is to help establish a community of practice (CoP) in support of Integrated Hydro-Terrestrial Modeling (IHTM).
         </h3>
         <p class="text-lg text-gray-800 text-center max-w-screen-sm">
-            This portal supports a multidisciplinary group of researchers and managers across government agencies and academic institutions in the United States. Our community of practice (CoP) shares an interest in creating a more robust hydro-terrestrial modeling ecosystem and strives to learn from one another’s work.
+            This web portal supports the multidisciplinary CoP across governmental, academic, and non-profit organizations in the United States with a shared interest in advancing national water prediction and projection capabilities. Advancing these capabilities is critical for supporting human well-being, economic growth and national security, while sustaining healthy ecosystems.
         </p>
     </div>
     <img
