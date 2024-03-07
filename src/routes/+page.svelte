@@ -128,7 +128,7 @@
 
 <div class="flex flex-col p-8 items-center">
     <h3 class="font-narrow text-xl font-semibold text-gray-800 text-center">
-        Agencies Involved:
+        Organizations:
     </h3>
     <div class="flex flex-row flex-wrap gap-12 items-center justify-around">
         <a
