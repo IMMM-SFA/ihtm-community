@@ -111,10 +111,10 @@
 />
 
 <div class="flex flex-col lg:flex-row p-8 gap-12 items-center lg:items-start justify-center">
-    <p class="text-lg text-gray-800 text-center lg:text-justify max-w-screen-sm">
+    <p class="text-lg text-gray-800 text-center lg:text-justify flex-1 max-w-screen-sm">
         The IHTM community aims to advance science by integrating process understanding and operational practices, enhancing national capabilities for prediction and scenario-testing, and furthering government agency missions on integrated water resources management through collaborations.
     </p>
-    <p class="text-lg text-gray-800 text-center lg:text-justify max-w-screen-sm">
+    <p class="text-lg text-gray-800 text-center lg:text-justify flex-1 max-w-screen-sm">
         Creating a seamless national IHTM capability requires close coordination across scientific, operational, and resource management communities. As such, our CoP emphasizes the “research to operations to research (R2O2R) pipeline,” using actionable intelligence and responding to advances in science and technology to address interconnected societal challenges.
     </p>
 </div>
