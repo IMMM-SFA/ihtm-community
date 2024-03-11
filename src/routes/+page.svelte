@@ -1,6 +1,5 @@
 <script>
     import { base } from '$app/paths';
-    import { page } from '$app/stores';
     import LinkIf from "$lib/LinkIf.svelte";
     const resources = [
         {
@@ -30,37 +29,30 @@
     ];
 </script>
 
-<div class="flex flex-row pt-8 pb-8 items-center justify-center gap-12 px-12">
-    <img
-        alt=""
-        class="hidden lg:block shrink-0 w-36 h-36 rounded-full overflow-hidden drop-shadow-lg"
-        src="favicon.png"
-    />
-    <div class="flex flex-col items-center gap-4">
-        <h3 class="font-narrow text-xl font-semibold text-gray-800 text-center">
+<div class="flex flex-row lg:py-8 items-center justify-center gap-12 lg:px-12">
+    <div class="flex flex-col items-center gap-4 py-4 px-8 bg-brand-primary text-white text-center max-w-screen-lg">
+        <h1 class="text-4xl font-bold lg:px-48">
+            Integrated Hydro-Terrestrial Modeling Community
+        </h1>
+        <h3 class="text-xl font-semibold lg:px-28">
             Our mission is to help establish a community of practice (CoP) in support of Integrated Hydro-Terrestrial Modeling (IHTM).
         </h3>
-        <p class="text-lg text-gray-800 text-center max-w-screen-sm">
+        <p class="text-lg text-justify lg:px-8">
             This web portal supports the multidisciplinary CoP across governmental, academic, and non-profit organizations in the United States with a shared interest in advancing national water prediction and projection capabilities. Advancing these capabilities is critical for supporting human well-being, economic growth and national security, while sustaining healthy ecosystems.
         </p>
     </div>
-    <img
-        alt=""
-        class="hidden lg:block shrink-0 w-36 h-36 rounded-full overflow-hidden drop-shadow-lg"
-        src="iso-ihtm_3.jpg"
-    />
 </div>
 
 <div
     class="
-        bg-fixed w-full bg-cover bg-no-repeat bg-[url('$lib/img/canyon.webp')]
+        bg-fixed max-w-[2048px] bg-top bg-cover bg-no-repeat bg-[url('$lib/img/canyon.webp')]
         h-32 md:h-72 -z-10
     "
 />
 
 <div class="flex flex-col p-8 gap-8 items-center max-w-screen-xl mx-auto">
-    <h3 class="font-narrow text-xl font-semibold text-gray-800 text-center">
-        Featured Resources:
+    <h3 class="text-2xl font-bold text-brand-primary text-center">
+        Featured Resources
     </h3>
     <div class="flex flex-row flex-wrap gap-12 justify-evenly w-full">
         {#each resources as r}
@@ -73,16 +65,16 @@
             >
                 <div class="flex flex-col w-64">
                     <img class="w-64 h-36 object-cover" alt="{r.name}" src="{r.img}" />
-                    <h6 class="mt-2 font-narrow font-semibold text-xs text-gray-500 uppercase">
+                    <h6 class="mt-2 font-semibold text-sm text-gray-500 uppercase">
                         {r.type}
                     </h6>
-                    <h4 class="font-narrow text-lg text-brand-primary text-shadow-sm shadow-black/10">
+                    <h4 class="text-lg font-semibold text-brand-primary">
                         {r.name}
                     </h4>
                     <p class="">
                         {r.description}
                     </p>
-                    <span class="w-fit uppercase font-narrow text-sm text-brand-primary">
+                    <span class="w-fit uppercase text-lg font-semibold text-brand-primary">
                         {#if r.link}
                             <span>
                                 › 
@@ -98,14 +90,14 @@
             </LinkIf>
         {/each}
     </div>
-    <a class="ml-auto mr-8 text-lg font-narrow border-b border-b-transparent text-brand-primary hover:border-b-brand-primary" href="{base}/resources">
+    <a class="ml-auto mr-8 text-lg font-semibold border-b border-b-transparent text-brand-primary hover:border-b-brand-primary" href="{base}/resources">
         SEE ALL
     </a>
 </div>
 
 <div
     class="
-        bg-fixed bg-cover w-full bg-no-repeat bg-[url('$lib/img/river.webp')]
+        bg-fixed bg-cover  max-w-[2048px] bg-top bg-no-repeat bg-[url('$lib/img/river.webp')]
         h-32 md:h-72 -z-10
     "
 />
@@ -121,14 +113,14 @@
 
 <div
     class="
-        bg-fixed w-full bg-cover bg-no-repeat bg-[url('$lib/img/snow.webp')]
+        bg-fixed  max-w-[2048px] bg-cover bg-no-repeat bg-[url('$lib/img/snow.webp')]
         h-32 md:h-72 bg-[center_top_25vh] -z-10
     "
 />
 
 <div class="flex flex-col p-8 items-center">
-    <h3 class="font-narrow text-xl font-semibold text-gray-800 text-center">
-        Organizations:
+    <h3 class="text-2xl font-bold text-brand-primary text-center">
+        Organizations
     </h3>
     <div class="flex flex-row flex-wrap gap-12 items-center justify-around">
         <a

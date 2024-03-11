@@ -2,106 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ArchivoNarrow */
+/* Poppins */
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-Regular.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-Regular.ttf');
 	font-style: normal;
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-Italic.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-Italic.ttf');
 	font-style: italic;
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-Medium.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-Medium.ttf');
 	font-style: normal;
 	font-weight: 500;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-MediumItalic.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-MediumItalic.ttf');
 	font-style: italic;
 	font-weight: 500;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-SemiBold.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-SemiBold.ttf');
 	font-style: normal;
 	font-weight: 600;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-SemiBoldItalic.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-SemiBoldItalic.ttf');
 	font-style: italic;
 	font-weight: 600;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-Bold.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-Bold.ttf');
 	font-style: normal;
 	font-weight: 700;
 }
 @font-face {
-	font-family: 'ArchivoNarrow';
-	src: url('/fonts/ArchivoNarrow-BoldItalic.ttf');
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-BoldItalic.ttf');
 	font-style: italic;
 	font-weight: 700;
 }
-
-/* Archivo */
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-Regular.ttf');
-	font-style: normal;
-	font-weight: 400;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-Italic.ttf');
-	font-style: italic;
-	font-weight: 400;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-Medium.ttf');
-	font-style: normal;
-	font-weight: 500;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-MediumItalic.ttf');
-	font-style: italic;
-	font-weight: 500;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-SemiBold.ttf');
-	font-style: normal;
-	font-weight: 600;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-SemiBoldItalic.ttf');
-	font-style: italic;
-	font-weight: 600;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-Bold.ttf');
-	font-style: normal;
-	font-weight: 700;
-}
-@font-face {
-	font-family: 'Archivo';
-	src: url('/fonts/Archivo-BoldItalic.ttf');
-	font-style: italic;
-	font-weight: 700;
-}
-
 
 @layer components {
 	.text-shadow {
